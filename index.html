@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Mp3-browser : This plugin will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser. Shameless fork from dotcomdevelopment.com." />
+    <meta name="description" content="mp3 Browser : This plugin will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Mp3-browser</title>
+    <title>mp3 Browser</title>
   </head>
 
   <body>
@@ -19,11 +19,11 @@
           <a id="forkme_banner" href="https://github.com/sverhagen/mp3-Browser">View on GitHub</a>
 
           <h1 id="project_title">mp3 Browser</h1>
-          <h2 id="project_tagline">This plugin will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser. Shameless fork from dotcomdevelopment.com.</h2>
+          <h2 id="project_tagline">This plugin will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser</h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/sverhagen/Export-Skype/downloads">Download executable</a>
-              <a class="tar_download_link" href="https://github.com/sverhagen/Export-Skype/downloads">Download executable</a>
+              <a class="zip_download_link" href="https://github.com/sverhagen/mp3-Browser/downloads">Download executable</a>
+              <a class="tar_download_link" href="https://github.com/sverhagen/mp3-Browser/downloads">Download executable</a>
             </section>
         </header>
     </div>
@@ -31,39 +31,89 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+        <h1>mp3 Browser</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>This plugin for the <a href="http://www.joomla.org" target="_blank">Joomla CMS</a> will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser. Shameless fork from dotcomdevelopment.com.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+        <h2>License</h2>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Licensed under the <a href="http://www.gnu.org/licenses" target="_blank">GNU General Public License (V2)</a>, thus making it free software and distributed &quot;as-is&quot;. It is distributed gratis.</p>
 
-<h3>Designer Templates</h3>
+	<h2>History & Acknowledgements</h2>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>This plugin is a shameless <a href="http://en.wikipedia.org/wiki/Fork_%28software_development%29" target="_blank">fork</a> from <a href="http://www.dotcomdevelopment.com/joomla/joomla-downloads/30-plugins" target="_blank">dotcomdevelopment.com</a>. I'm not happy about doing so, but the original authors did not respond to my enquiry and I had needs for myself in modifying the plugin that I wanted to move forward with.</p>
 
-<h3>Rather Drive Stick?</h3>
+<p>Previous authors that I wish to acknowledge likely are others such as Jon Hollis, Luke Collymore, as associated with dotcomdevelopment.com.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+	<h2>Usage</h2>
 
-<h3>Authors and Contributors</h3>
+	<h3>Basic Usage</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+	<p>Plugin installation through the administration site of your Joomla installation. Please remember to publish the plugin!</p>
 
-<h3>Support or Contact</h3>
+	<p>Place the tags <code>{music}<span class="variable">folderName/subfolder</span>{/music}</code> in any content item.
+		<br/>The plugin will strip the tags and replace it with a table containing all the MP3s from that folder for playing or downloading.
+		<br/><br/>For the file name the MP3's ID3 tag of title/artist is used; if no title tag is present the file name is used.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+
+	<script type="text/javascript">
+		function toggleScreenShot()
+		{
+			var element = document.getElementById("screenshot");
+			var show = element.style.display == "none";
+			elementShow("screenshot", show);
+			elementShow("screenshotLabel", !show);
+		}
+		function elementShow(elementName, show)
+		{
+			var element = document.getElementById(elementName);
+			if( show )
+			{
+				element.style.display = "block";
+			}
+			else
+			{
+				element.style.display = "none";
+			}
+		}
+	</script>
+
+	<p>
+		<a id="screenshotLabel" href="javascript:toggleScreenShot();">Click here to see a screen shot.</a>
+		<div id="screenshot" style="display: none;">
+			<a href="javascript:toggleScreenShot();"><img 
+				src="https://raw.github.com/sverhagen/mp3-Browser/master/screenshot.png"
+				alt="Screen shot" title="Screen shot"></a></div>
+	</p>
+
+	<h3><a name="configuration"></a>Configuration</h3>
+
+	<p>The plugin can be configured through the administration site.</p>
+
+	<h3>Advanced Usage</h3>
+
+	<dl>
+		<dt><a name="pagination"></a>Pagination</dt>
+		<dd>The page number can be included in the music tag, such as: <code>{music pageNumber=&quot;<span class="variable">number</span>&quot;}</code>. The page number is 0-based. Page 0 is the default if this parameter is not included in the music tag. The page number is used to determine which music files to display, using the <code>maxRows</code> <a href="#configuration">configuration</a> options.</dd>
+		<dt>Offset</dt>
+		<dd>The offset can be included in the music tag, such as: <code>{music offset=&quot;<span class="variable">number</span>&quot;}</code>. Offset 0 is the default if this parameter is not included in the music tag. The offset is used to determine which music files to display.</dd>
+	</dl>
+
+	<h2>Limitations</h2>
+
+	<p>It is important to understand that this a plugin, not a component, and as such it is unaware of pagination (although this can be <a href="#pagination">mimicked</a>) or where it is being used.</p>
+
+	<p>It is also important to understand that this plugin is directly based upon the contents of a file system folder, and as such does a large amount of file I/O, which negatively affects performance and which may not be what you want for your application.</p>
+
+	<p>These are fundamental limitations; if they affect your application, this plugin may simply not be for you.</p>
+
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Mp3-browser maintained by <a href="https://github.com/sverhagen">sverhagen</a></p>
+        <p class="copyright">mp3 Browser maintained by <a href="https://github.com/sverhagen">sverhagen</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
