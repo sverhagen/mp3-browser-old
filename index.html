@@ -26,6 +26,7 @@
               <a class="tar_download_link" href="https://github.com/sverhagen/mp3-Browser/downloads">Download executable</a>
             </section>
         </header>
+ 
     </div>
 
     <!-- MAIN CONTENT -->
@@ -33,28 +34,17 @@
       <section id="main_content" class="inner">
         <h1>mp3 Browser</h1>
 
-<p>This plugin for the <a href="http://www.joomla.org" target="_blank">Joomla CMS</a> will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser. Shameless fork from dotcomdevelopment.com.</p>
+	<p>This plugin for the <a href="http://www.joomla.org" target="_blank">Joomla CMS</a> will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser. Shameless fork from dotcomdevelopment.com.</p>
 
-        <h2>License</h2>
-
-<p>Licensed under the <a href="http://www.gnu.org/licenses" target="_blank">GNU General Public License (V2)</a>, thus making it free software and distributed &quot;as-is&quot;. It is distributed gratis.</p>
-
-	<h2>History & Acknowledgements</h2>
-
-<p>This plugin is a shameless <a href="http://en.wikipedia.org/wiki/Fork_%28software_development%29" target="_blank">fork</a> from <a href="http://www.dotcomdevelopment.com/joomla/joomla-downloads/30-plugins" target="_blank">dotcomdevelopment.com</a>. I'm not happy about doing so, but the original authors did not respond to my enquiry and I had needs for myself in modifying the plugin that I wanted to move forward with.</p>
-
-<p>Previous authors that I wish to acknowledge likely are others such as Jon Hollis, Luke Collymore, as associated with dotcomdevelopment.com.</p>
-
-	<h2>Usage</h2>
-
-	<h3>Basic Usage</h3>
-
-	<p>Plugin installation through the administration site of your Joomla installation. Please remember to publish the plugin!</p>
-
-	<p>Place the tags <code>{music}<span class="variable">folderName/subfolder</span>{/music}</code> in any content item.
-		<br/>The plugin will strip the tags and replace it with a table containing all the MP3s from that folder for playing or downloading.
-		<br/><br/>For the file name the MP3's ID3 tag of title/artist is used; if no title tag is present the file name is used.</p>
-
+	<p>Features: <ul class="columns" style="width: 100%">
+		<li>Create table of MP3s in folder</li>
+		<li>Show MP3 tag info, including cover art</li>
+		<li>&quot;No items to display&quot; when appropriate</li>
+		<li>Mimicked pagination</li>
+		<li>Start at offset</li>
+		<li>Multi-language and Unicode support</li>
+		<li>Open source and gratis</li>
+	</ul><br class="columns"/></p>
 
 	<script type="text/javascript">
 		function toggleScreenShot()
@@ -85,6 +75,26 @@
 				src="https://raw.github.com/sverhagen/mp3-Browser/master/screenshot.png"
 				alt="Screen shot" title="Screen shot"></a></div>
 	</p>
+
+        <h2>License</h2>
+
+	<p>Licensed under the <a href="http://www.gnu.org/licenses" target="_blank">GNU General Public License (V2)</a>, thus making it free software and distributed &quot;as-is&quot;. It is distributed gratis.</p>
+
+	<h2>History & Acknowledgements</h2>
+
+	<p>This plugin is a shameless <a href="http://en.wikipedia.org/wiki/Fork_%28software_development%29" target="_blank">fork</a> from <a href="http://www.dotcomdevelopment.com/joomla/joomla-downloads/30-plugins" target="_blank">dotcomdevelopment.com</a>. I'm not happy about doing so, but the original authors did not respond to my enquiry and I had needs for myself in modifying the plugin that I wanted to move forward with.</p>
+
+	<p>Previous authors that I wish to acknowledge likely are others such as Jon Hollis, Luke Collymore, as associated with dotcomdevelopment.com.</p>
+
+	<h2>Usage</h2>
+
+	<h3>Basic Usage</h3>
+
+	<p>Plugin installation through the administration site of your Joomla installation. Please remember to publish the plugin!</p>
+
+	<p>Place the tags <code>{music}<span class="variable">folderName/subfolder</span>{/music}</code> in any content item.
+		<br/>The plugin will strip the tags and replace it with a table containing all the MP3s from that folder for playing or downloading.
+		<br/><br/>For the file name the MP3's ID3 tag of title/artist is used; if no title tag is present the file name is used.</p>
 
 	<h3><a name="configuration"></a>Configuration</h3>
 
