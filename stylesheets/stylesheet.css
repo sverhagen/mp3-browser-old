@@ -187,6 +187,11 @@ code {
   box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
+code .variable {
+  font-style: italic;
+  font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+}
+
 pre code {
   display: block;
   box-shadow: none;
