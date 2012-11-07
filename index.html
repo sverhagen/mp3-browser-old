@@ -46,6 +46,7 @@
 		<li>Start at offset</li>
 		<li>Multi-language and Unicode support</li>
 		<li>Open source and gratis</li>
+		<li>Filter files on regular expression</li>
 	</ul><br class="columns"/></p>
 
 	<script type="text/javascript">
@@ -109,11 +110,13 @@
 
 	<dl>
 		<dt><a name="pagination"></a>Pagination</dt>
-		<dd>The page number can be included as a paremeter in the music tag, such as: <code>{music pageNumber=&quot;<span class="variable">number</span>&quot;}</code>. The page number is 0-based. Page 0 is the default if this parameter is not included in the music tag. The page number is used to determine which music files to display, using the <code>maxRows</code> <a href="#configuration">configuration</a> options.</dd>
+		<dd>The page number can be included as a paremeter in the music tag, such as: <code>{music pageNumber=&quot;<span class="variable">number</span>&quot;}</code>. The page number is 0-based. Page 0 is the default if this parameter is not included in the music tag. The page number is used to determine which music files to display, using the <code>maxRows</code> <a href="#configuration">configuration</a> option.</dd>
 		<dt>Offset</dt>
 		<dd>The offset can be included as a paremeter in the music tag, such as: <code>{music offset=&quot;<span class="variable">number</span>&quot;}</code>. Offset 0 is the default if this parameter is not included in the music tag. The offset is used to determine which music files to display.</dd>
+		<dt>File filtering</dt>
+		<dd>The files can be filtered on a regular expression, such as: <code>+\.mp3</code>, <code>.*hip hop.*\.mp3</code> for all MP3s with "hip hop" in their name, or <code><span class="variable">filename</span></code> to display a specific single file name. Don't forget that this uses regular expressions: a specific single file name may thus be filtered on as follows: <code>\(Feels Like\) Heaven - Fiction Factory\.MP3</code>. The regular expression is applied case-insensitively.</dd>
 		<dt><a name="override"></a>Override configuration</dt>
-		<dd>If allowed to do so through the plugin configuration (&quot;Configuration override allowed&quot;) article authors can override plugin configuration using parameters in the music tag, such as: <code>{music maxRows="5" volumeControl="1"}</code>.</dd>
+		<dd>If allowed to do so through the plugin configuration (&quot;Configuration override allowed&quot;) article authors can override plugin configuration using parameters in the music tag, such as: <code>{music maxRows="5" volumeControl="1"}</code> or <code>{music fileFilter="ABC - Jackson 5\.mp3"}</code>.</dd>
 	</dl>
 
 	<h2>Limitations</h2>
