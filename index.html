@@ -36,9 +36,10 @@
 
 	<p>This plugin for the <a href="http://www.joomla.org" target="_blank">Joomla CMS</a> will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser. Shameless fork from dotcomdevelopment.com.</p>
 
-	<p>Features: <ul class="columns" style="width: 100%">
+	<p>Features: <ul class="columns">
 		<li>Create table of MP3s in folder</li>
 		<li>Show MP3 tag info, including cover art</li>
+		<li><a href="http://docs.joomla.org/Smart_Search_quickstart_guide" target="_blank">Smart Search</a> indexing</li>
 		<li>&quot;No items to display&quot; when appropriate</li>
 		<li>Mimicked pagination</li>
 		<li>Start at offset</li>
@@ -90,7 +91,10 @@
 
 	<h3>Basic Usage</h3>
 
-	<p>Plugin installation through the administration site of your Joomla installation. Please remember to publish the plugin!</p>
+	<p>Package installation through the administration site of your Joomla installation, of two plugins: <ul>
+			<li>Content plugin</li>
+			<li><a href="http://docs.joomla.org/Smart_Search_quickstart_guide" target="_blank">Smart Search</a> plugin</li>
+		</ul>Please remember to publish the plugins!</p>
 
 	<p>Place the tags <code>{music}<span class="variable">folderName/subfolder</span>{/music}</code> in any content item.
 		<br/>The plugin will strip the tags and replace it with a table containing all the MP3s from that folder for playing or downloading.
@@ -115,7 +119,9 @@
 
 	<p>It is also important to understand that this plugin is directly based upon the contents of a file system folder, and as such does a large amount of file I/O, which negatively affects performance and which may not be what you want for your application.</p>
 
-	<p>These are fundamental limitations; if they affect your application, this plugin may simply not be for you.</p>
+	<p>As a result of the latter limitation, search results are only updated when changing the article or reindexing. Changes to the contents of the MP3 file system folder are not picked up automatically.</p>
+
+	<p>These are mostly fundamental limitations; if they affect your application, this plugin may simply not be for you.</p>
 
       </section>
     </div>
