@@ -41,13 +41,15 @@
 		<li>Show MP3 tag info, including cover art</li>
 		<li>Flash playback (optional volume control)</li>
 		<li><a href="http://docs.joomla.org/Smart_Search_quickstart_guide" target="_blank">Smart Search</a> indexing</li>
-		<li>&quot;No items to display&quot; when appropriate</li>
-		<li>Mimicked pagination</li>
-		<li>Start at offset</li>
-		<li>Multi-language and Unicode support</li>
 		<li>Open source and gratis</li>
-		<li>Filter files on regular expression</li>
+		<li><a href="#mobile">Rendering options for mobile</a></li>
+		<li><a href="#override">Override configuration by authors</a></li>
+		<li><a href="#filtering">Filter files on regular expression</a></li>
+		<li><a href="#pagination">Mimicked pagination</a></li>
+		<li><a href="#offset">Start at offset</a></li>
 		<li>Sort options</li>
+		<li>Multi-language and Unicode support</li>
+		<li>&quot;No items to display&quot; when appropriate</li>
 		<li>Option to limit download</li>
 	</ul><br class="columns"/></p>
 
@@ -74,6 +76,7 @@
 	</script>
 
 	<p>
+		<a name="screenshotwrapper"></a>
 		<a id="screenshotLabel" href="javascript:toggleScreenShot();">Click here to see a screen shot.</a>
 		<div id="screenshot" style="display: none;">
 			<a href="javascript:toggleScreenShot();"><img 
@@ -104,7 +107,7 @@
 
 	<p>Place the tags <code>{music}<span class="variable">folderName/subfolder</span>{/music}</code> in any content item.
 		<br/>The plugin will strip the tags and replace it with a table containing all the MP3s from that folder for playing or downloading.
-		<br/><br/>For the file name the MP3's ID3 tag of title/artist is used; if no title tag is present the file name is used.</p>
+		<br/><br/>For displaying each music item the MP3's ID3 tag of title/artist is used; if no title tag is present the file name is used.</p>
 
 	<h3><a name="configuration"></a>Configuration</h3>
 
@@ -115,12 +118,14 @@
 	<dl>
 		<dt><a name="pagination"></a>Pagination</dt>
 		<dd>The page number can be included as a parameter in the music tag, such as: <code>{music pageNumber=&quot;<span class="variable">number</span>&quot;}</code>. The page number is 0-based. Page 0 is the default if this parameter is not included in the music tag. The page number is used to determine which music files to display, using the <code>maxRows</code> <a href="#configuration">configuration</a> option.</dd>
-		<dt>Offset</dt>
+		<dt><a name="offset"></a>Offset</dt>
 		<dd>The offset can be included as a parameter in the music tag, such as: <code>{music offset=&quot;<span class="variable">number</span>&quot;}</code>. Offset 0 is the default if this parameter is not included in the music tag. The offset is used to determine which music files to display.</dd>
-		<dt>File filtering</dt>
+		<dt><a name="filtering"></a>File filtering</dt>
 		<dd>The files can be filtered on a regular expression, such as: <code>+\.mp3</code>, <code>.*hip hop.*\.mp3</code> for all MP3s with "hip hop" in their name, or <code><span class="variable">filename</span></code> to display a specific single file name. Don't forget that this uses regular expressions: a specific single file name may thus be filtered on as follows: <code>\(Feels Like\) Heaven - Fiction Factory\.MP3</code>. The regular expression is applied case-insensitively.</dd>
 		<dt><a name="override"></a>Override configuration</dt>
 		<dd>If allowed to do so through the plugin configuration (&quot;Configuration override allowed&quot;) article authors can override the plugin configuration using parameters in the music tag, such as: <code>{music maxRows="5" volumeControl="1"}</code> or <code>{music fileFilter="ABC - Jackson 5\.mp3"}</code>.</dd>
+		<dt><a name="mobile"></a>Rendering for mobile</dt>
+		<dd>The music items can either be rendered: <ul><li>Using <code>div</code> elements</li><li><code>table</code> element with rows and cells (default, see <a href="#screenshotwrapper">screen shot</a>)</li><li><code>table</code> element by default, only using <code>div</code> elements for selected template; a template can be chosen. Set this to the template used for mobile visitors, so that for mobile visitors the music items are rendered as <code>div</code> elements, and thus looks much better than as a <code>table</code> does on mobile devices</li></dd>
 	</dl>
 
 	<h2>Limitations</h2>
