@@ -21,10 +21,6 @@
           <h1 id="project_title">mp3 Browser</h1>
           <h2 id="project_tagline">This plugin will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/sverhagen/mp3-Browser/downloads">Download executable</a>
-              <a class="tar_download_link" href="https://github.com/sverhagen/mp3-Browser/downloads">Download executable</a>
-            </section>
         </header>
  
     </div>
@@ -34,113 +30,7 @@
       <section id="main_content" class="inner">
         <h1>mp3 Browser</h1>
 
-	<p><img src="images/logo.png" style="width: 87px; height: 74px; float: right; top: -15px">This plugin for the <a href="http://www.joomla.org" target="_blank">Joomla CMS</a> will create a table of every MP3 in a specified folder. It displays the ID3 information of each track with a link to download or play the file in the browser. Shameless fork from dotcomdevelopment.com.</p>
-
-	<p>Features: <ul class="columns">
-		<li>Create table of MP3s in folder</li>
-		<li>Show MP3 tag info, including cover art</li>
-		<li>Flash playback (optional volume control)</li>
-		<li><a href="http://docs.joomla.org/Smart_Search_quickstart_guide" target="_blank">Smart Search</a> indexing</li>
-		<li>Cover art and artist search taxonomy</li>
-		<li>Open source and gratis</li>
-		<li><a href="#mobile">Rendering options for mobile</a></li>
-		<li><a href="#override">Override configuration by authors</a></li>
-		<li><a href="#filtering">Filter files on regular expression</a></li>
-		<li><a href="#pagination">Mimicked pagination</a></li>
-		<li><a href="#offset">Start at offset</a></li>
-		<li>Sort options</li>
-		<li>Anchor per MP3, used in search results</li>
-		<li>Multi-language and Unicode support</li>
-		<li>&quot;No items to display&quot; when appropriate</li>
-		<li>Option to limit download</li>
-	</ul><br class="columns"/></p>
-
-	<script type="text/javascript">
-		function toggleScreenShot()
-		{
-			var element = document.getElementById("screenshot");
-			var show = element.style.display == "none";
-			elementShow("screenshot", show);
-			elementShow("screenshotLabel", !show);
-		}
-		function elementShow(elementName, show)
-		{
-			var element = document.getElementById(elementName);
-			if( show )
-			{
-				element.style.display = "block";
-			}
-			else
-			{
-				element.style.display = "none";
-			}
-		}
-	</script>
-
-	<p>
-		<a name="screenshotwrapper"></a>
-		<a id="screenshotLabel" href="javascript:toggleScreenShot();">Click here to see a screen shot.</a>
-		<div id="screenshot" style="display: none;">
-			<a href="javascript:toggleScreenShot();"><img 
-				src="https://raw.github.com/sverhagen/mp3-Browser/master/screenshot.png"
-				alt="Screen shot" title="Screen shot"></a></div>
-	</p>
-
-	<p>If you use mp3 Browser, please post a rating and a review at the Joomla Extensions Directory.</p>
-
-        <h2>License</h2>
-
-	<p>Licensed under the <a href="http://www.gnu.org/licenses" target="_blank">GNU General Public License (V2)</a>, thus making it free software and distributed &quot;as-is&quot;. It is distributed gratis.</p>
-
-	<h2>History & Acknowledgements</h2>
-
-	<p>This plugin is a shameless <a href="http://en.wikipedia.org/wiki/Fork_%28software_development%29" target="_blank">fork</a> from <a href="http://www.dotcomdevelopment.com/joomla/joomla-downloads/30-plugins" target="_blank">dotcomdevelopment.com</a>. I'm not happy about doing so, but the original authors did not respond to my enquiry and I had needs for myself in modifying the plugin that I wanted to move forward with.</p>
-
-	<p>Previous authors that I wish to acknowledge likely are others such as Jon Hollis, Luke Collymore, as associated with dotcomdevelopment.com.</p>
-
-	<a name="usage"></a><h2>Usage</h2>
-
-	<h3>Basic Usage</h3>
-
-	<p><a href="https://github.com/sverhagen/mp3-Browser/downloads" target="_blank">Download</a> the package. Package installation through the administration site of your Joomla installation, of two plugins: <ul>
-			<li>Content plugin</li>
-			<li><a href="http://docs.joomla.org/Smart_Search_quickstart_guide" target="_blank">Smart Search</a> plugin</li>
-		</ul>Please remember to publish the plugins!</p>
-
-	<p>Place the tags <code>{music}<span class="variable">folderName/subfolder</span>{/music}</code> in any content item.
-		<br/>The plugin will strip the tags and replace it with a table containing all the MP3s from that folder for playing or downloading.
-		<br/><br/>For displaying each music item the MP3's ID3 tag of title/artist is used; if no title tag is present the file name is used.</p>
-
-	<h3><a name="configuration"></a>Configuration</h3>
-
-	<p>The plugin can be configured through the administration site. Configuration can be <a href="#override">overriden</a> in articles.</p>
-
-	<h3>Advanced Usage</h3>
-
-	<dl>
-		<dt><a name="pagination"></a>Pagination</dt>
-		<dd>The page number can be included as a parameter in the music tag, such as: <code>{music pageNumber=&quot;<span class="variable">number</span>&quot;}</code>. The page number is 0-based. Page 0 is the default if this parameter is not included in the music tag. The page number is used to determine which music files to display, using the <code>maxRows</code> <a href="#configuration">configuration</a> option.</dd>
-		<dt><a name="offset"></a>Offset</dt>
-		<dd>The offset can be included as a parameter in the music tag, such as: <code>{music offset=&quot;<span class="variable">number</span>&quot;}</code>. Offset 0 is the default if this parameter is not included in the music tag. The offset is used to determine which music files to display.</dd>
-		<dt><a name="filtering"></a>File filtering</dt>
-		<dd>The files can be filtered on a regular expression, such as: <code>+\.mp3</code>, <code>.*hip hop.*\.mp3</code> for all MP3s with "hip hop" in their name, or <code><span class="variable">filename</span></code> to display a specific single file name. Don't forget that this uses regular expressions: a specific single file name may thus be filtered on as follows: <code>\(Feels Like\) Heaven - Fiction Factory\.MP3</code>. The regular expression is applied case-insensitively.</dd>
-		<dt><a name="override"></a>Override configuration</dt>
-		<dd>If allowed to do so through the plugin configuration (&quot;Configuration override allowed&quot;) article authors can override the plugin configuration using parameters in the music tag, such as: <code>{music maxRows="5" volumeControl="1"}</code> or <code>{music fileFilter="ABC - Jackson 5\.mp3"}</code>.</dd>
-		<dt><a name="mobile"></a>Rendering for mobile</dt>
-		<dd>The music items can either be rendered: <ul><li>Using <code>div</code> elements</li><li><code>table</code> element with rows and cells (default, see <a href="#screenshotwrapper">screen shot</a>)</li><li><code>table</code> element by default, only using <code>div</code> elements for selected template; a template can be chosen. Set this to the template used for mobile visitors, so that for mobile visitors the music items are rendered as <code>div</code> elements, and thus looks much better than as a <code>table</code> does on mobile devices</li></dd>
-	</dl>
-
-	<h2>Limitations</h2>
-
-	<p>It is important to understand that this a plugin, not a component, and as such it is unaware of pagination (although this can be <a href="#pagination">mimicked</a>) or where it is being used.</p>
-
-	<p>It is also important to understand that this plugin is directly based upon the contents of a file system folder, and as such does a large amount of file I/O, which negatively affects performance and which may not be what you want for your application.</p>
-
-	<p>As a result of the latter limitation, search results are only updated when changing the article or reindexing. Changes to the contents of the MP3 file system folder are not picked up automatically.</p>
-
-	<p>These are mostly fundamental limitations; if they affect your application, this plugin may simply not be for you.</p>
-
-	<p>Only tested with Joomla 2.5.</p>
+	<p><a href="http://code.google.com/p/mp3-browser/">This project has moved to Google Code.</a></p>
 
       </section>
     </div>
